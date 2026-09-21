@@ -168,9 +168,6 @@ async def inline_mode_handler(inline_query:InlineQuery):
         cache_time=1
     )
 
-
-
-
 async def main():
     await create_table()
     bot = Bot(TOKEN)
