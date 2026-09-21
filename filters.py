@@ -1,0 +1,11 @@
+from aiogram.filters import Filter
+from aiogram.types import Message
+class is_admin(Filter):
+    def __init__(self,admins:list[int])->None:
+        self.admins=admins
+
+
+    async def __call__(self,event:Message)->bool:
+        if event.from_user.id in self.admins:
+            return True
+        return False
