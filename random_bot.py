@@ -158,6 +158,7 @@ async def inline_mode_handler(inline_query:InlineQuery):
     result = InlineQueryResultArticle(
         id="inline_handler",
         title="عدد شانسی",
+        
         input_message_content=InputTextMessageContent(message_text="salam"),
         reply_markup=set_inline_keyboard_setNumber(max_number,min_number),
         description="انتخاب عدد از بازه ی انتخابی",
